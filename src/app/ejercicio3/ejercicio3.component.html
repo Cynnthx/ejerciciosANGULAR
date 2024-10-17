@@ -1,0 +1,11 @@
+<p>ejercicio3 works!</p>
+<div class="ejercicio3-container">
+  <!--enlazamos a la variable nuevaTarea mediante ngModel -->
+  <input [(ngModel)]="nuevaTarea" placeholder="Agregar nueva tarea" />
+  <button (click)="generarEjercicio3()">Agregar</button> <!-- botón de agregar tarea -->
+  <h2>{{ nuevaTarea }}</h2>
+</div>
+<ul>
+  <!-- lista (desordenada) de tareas que muestra todas las tareas-->
+  <li *ngFor="let tarea of tareas">{{ tarea }}</li>
+</ul>

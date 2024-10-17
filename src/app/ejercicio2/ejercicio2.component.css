@@ -1,0 +1,9 @@
+.ejercicio2-container{
+  text-align: center;
+  margin-top: 20px;
+}
+.ejercicio2-container h2{
+  font-size: 25px;
+  color: darkcyan;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+}
