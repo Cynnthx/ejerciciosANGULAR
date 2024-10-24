@@ -5,17 +5,12 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './ejercicio2.component.html',
-  styleUrl: './ejercicio2.component.css'
+  styleUrls: ['./ejercicio2.component.css']
 })
-export class Ejercicio2Component implements OnInit, OnDestroy{
-
+export class Ejercicio2Component implements OnInit, OnDestroy {
   tiempoAhora: string = '';
   private intervalo: any;
   private detenido: boolean = false;
-
-  constructor() {
-    this.generarEjercicio2Init();
-  }
 
   ngOnInit() {
     this.generarEjercicio2Init();
@@ -27,20 +22,25 @@ export class Ejercicio2Component implements OnInit, OnDestroy{
 
   generarEjercicio2Init() {
     this.actualizarTiempo();
-    this.intervalo = setInterval(() => { //actualiza la hora cada segundo
+    this.intervalo = setInterval(() => {
       if (!this.detenido) {
-        this.actualizarTiempo(); //actualiza la hora si el reloj no está detenido
+        this.actualizarTiempo();
       }
     }, 1000);
   }
 
   actualizarTiempo() {
-    const ahora = new Date(); //obtenemos la hora actual
-    this.tiempoAhora = ahora.toLocaleTimeString();  //formateamos la hora actual cmo 1 cadena
+    const ahora = new Date();
+    this.tiempoAhora = ahora.toLocaleTimeString();
   }
 
   detenerReloj() {
     this.detenido = true;
+  }
+
+  actualizarReloj() {
+    this.detenido = false;
+    this.actualizarTiempo();
   }
 
   ejercicio2Destroy() {
