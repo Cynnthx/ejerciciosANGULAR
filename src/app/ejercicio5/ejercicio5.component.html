@@ -1,0 +1,8 @@
+<p>ejercicio5 works!</p>
+<div class="comentarios-container">
+  <textarea [(ngModel)]="comentario" placeholder="Escribe tu comentario"></textarea>
+  <button (click)="enviarComentario()">Enviar comentario</button>
+  <div class="comentarios-lista">
+    <p *ngFor="let comentario of comentarios">{{ comentario }}</p>
+  </div>
+</div>

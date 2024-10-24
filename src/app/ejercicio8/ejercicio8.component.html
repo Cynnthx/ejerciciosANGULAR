@@ -1,0 +1,29 @@
+<p>ejercicio8 works!</p>
+
+<div class="contenedor-compra">
+  <div class="lista-articulos">
+    <h3>Artículos</h3>
+    <ul>
+      <li *ngFor="let articulo of articulos">
+        {{ articulo.nombre }} - {{ articulo.precio | currency }}
+        <div class="botones">
+          <button (click)="disminuirCantidad(articulo)">-</button>
+          {{ articulo.cantidad }}
+          <button (click)="incrementarCantidad(articulo)">+</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="ticket-compra">
+    <h3>Ticket de Compra</h3>
+    <ul>
+      <ng-container *ngFor="let articulo of articulos">
+        <li *ngIf="articulo.cantidad > 0">
+          {{ articulo.nombre }} - Cantidad: {{ articulo.cantidad }} - Total: {{ (articulo.precio * articulo.cantidad) | currency }}
+        </li>
+      </ng-container>
+    </ul>
+    <p><strong>Total a pagar:</strong> {{ totalCompra | currency }}</p>
+  </div>
+</div>

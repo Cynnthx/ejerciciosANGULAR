@@ -1,0 +1,21 @@
+<p>ejercicio7 works!</p>
+
+<div class="calculadora-container">
+  <h2>Calculadora Simple</h2>
+
+  <!-- Campos de entrada para los números -->
+  <input [(ngModel)]="numero1" type="number" placeholder="Ingresa el primer número">
+  <input [(ngModel)]="numero2" type="number" placeholder="Ingresa el segundo número">
+
+  <!-- Botones para las operaciones -->
+  <div class="botones-operaciones">
+    <button (click)="sumar()">Sumar</button>
+    <button (click)="restar()">Restar</button>
+    <button (click)="multiplicar()">Multiplicar</button>
+    <button (click)="dividir()">Dividir</button>
+    <button (click)="raizCuadrada()">Raíz Cuadrada</button>
+  </div>
+
+  <!-- Resultado -->
+  <p>Resultado: {{ resultado }}</p>
+</div>

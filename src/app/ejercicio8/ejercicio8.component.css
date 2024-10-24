@@ -1,0 +1,55 @@
+.contenedor-compra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #e0f7fa;
+}
+
+.lista-articulos,
+.ticket-compra {
+  width: 80%;
+  border: 2px solid #9f509f;;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.lista-articulos ul,
+.ticket-compra ul {
+  list-style: none;
+  padding: 0;
+}
+
+.lista-articulos li,
+.ticket-compra li {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #e0f7fa;
+}
+
+.lista-articulos li:last-child,
+.ticket-compra li:last-child {
+  border-bottom: none;
+}
+
+.botones button {
+  margin: 0 5px;
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: #81d4fa;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.botones button:hover {
+  background-color: #9f509f;
+}
